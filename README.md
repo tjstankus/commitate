@@ -1,26 +1,25 @@
-# Commitate
+Commitate
+=========
 
-TODO: Write a gem description
+Syntax
+------
 
-## Installation
+```
+>>[hello.rb](af68c6261b14feccdd354b5c1055dcc733cad1e3){'lines':'1,6-9'}
+```
 
-Add this line to your application's Gemfile:
+Both Marked and Leanpub Markdown extensions use `<<`; the `>>` syntax is to
+avoid conflict with those extensions. The `[]()` bracket parentheses syntax is
+in line with basic Markdown and the `{}` curly braces use the same format as the
+widely-adopted PHP Markdown extras.
 
-    gem 'commitate'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install commitate
-
-## Usage
+Usage
+-----
 
 TODO: Write usage instructions here
 
-## Contributing
+Contributing
+------------
 
 1. Fork it ( https://github.com/[my-github-username]/commitate/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
