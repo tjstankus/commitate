@@ -16,13 +16,16 @@ Command line possibilities
   content from the configured git repository, and creats a new output file,
   leaving the processed file as is.
 
-Render processing
------------------
+Renderer verfication
+--------------------
+
+`Renderer#preprocess` is a hook method that gets invoked by Redcarpet. Our
+implementation has a dependency on a processor object that responds to
+'#process'.
 
 Because we are being invoked via Redcarpet hook method, we can't simply change
-the `preprocess` method signature to inject the processor we want to use, even
-though the processor is the external dependency. So we substitute a processor on
-the renderer instance, then pass that instance to the Redcarpet method for
-rendering. So, we can test with a stubbed processor and have it render some
-expected output and that way specify that the regular expression is matching
-when we expect it to, and not matching when we do not expect it to.
+the `preprocess` method signature to inject the processor. To satisfy the
+processor dependency for verification/testing, we inject the processor on the
+renderer instance, then pass that instance to `Redcarpet::Markdown.new` for
+rendering. So, we test with a minimal processor that renders expected output
+and, in that way, specify behaviors such as regular expression matching.
