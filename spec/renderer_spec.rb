@@ -6,9 +6,13 @@ module Commitate
 
     include MarkdownSnippets
 
-    it 'sets default processor'
+    it 'sets default processor' do
+      renderer = Renderer.new
+      expect(renderer.processor).not_to be_nil
+    end
 
     describe '#render annotation matching' do
+
       before do
         commitate_renderer = Renderer.new
         commitate_renderer.processor = TestProcessor
