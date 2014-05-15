@@ -58,6 +58,16 @@ module Commitate
           expect(html).not_to include('TestProcessor#process')
         end
       end
+
+      context 'given a commitate annotation with options' do
+
+        let(:markdown) { markdown_with_commitate_annotations_options }
+
+        it 'annotates the markdown' do
+          html = @renderer.render(markdown)
+          expect(html).to include('TestProcessor#process')
+        end
+      end
     end
 
   end

@@ -44,4 +44,15 @@ This is another paragraph of text.
 MARKDOWN
   end
 
+  def markdown_with_commitate_annotations_options
+<<MARKDOWN
+This is a paragraph of text.
+
+```ruby
+>>[hello.rb](af68c6261b14feccdd354b5c1055dcc733cad1e3){lines: 1,5-8}
+```
+
+This is another paragraph of text.
+MARKDOWN
+  end
 end
