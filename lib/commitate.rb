@@ -1,4 +1,5 @@
 require 'commitate/version'
+require 'commitate/parser'
 require 'commitate/processor'
 require 'commitate/renderer'
 
