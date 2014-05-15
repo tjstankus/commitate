@@ -1,7 +1,7 @@
 module Commitate
   describe Parser do
 
-    let(:markdown) { "<<[test.rb](123456789abcde){lines: '1,5-8'}" }
+    let(:markdown) { "<<[test.rb](123456789abcde){'lines':'1,5-8'}" }
     let(:parser) { Parser.new(markdown) }
 
     it 'parses the filename' do

@@ -49,7 +49,7 @@ MARKDOWN
 This is a paragraph of text.
 
 ```ruby
->>[hello.rb](af68c6261b14feccdd354b5c1055dcc733cad1e3){lines: 1,5-8}
+>>[hello.rb](af68c6261b14feccdd354b5c1055dcc733cad1e3){'lines': '1,5-8'}
 ```
 
 This is another paragraph of text.
