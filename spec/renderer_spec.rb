@@ -1,4 +1,3 @@
-require 'support/test_processor'
 require 'support/markdown_snippets'
 
 module Commitate
@@ -15,7 +14,8 @@ module Commitate
 
       before do
         commitate_renderer = Renderer.new
-        commitate_renderer.processor = TestProcessor
+        commitate_renderer.processor = double('processor',
+                                              process: 'TestProcessor#process')
         @renderer = Redcarpet::Markdown.new(commitate_renderer)
       end
 
